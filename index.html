@@ -1,0 +1,914 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>畑から百貨店へ。｜カムジャバト × 三越伊勢丹 × JTB 修学旅行探究プログラム</title>
+  <meta name="description" content="学校は2コマから、企業は月1回レビューから始められる。講師はオプション選択、基本はオンライン支援。カムジャバトと三越伊勢丹の売場を題材に、Z世代インサイト・商品企画・SNS・地域価値創出を学ぶ修学旅行探究プログラム。" />
+  <meta property="og:title" content="畑から百貨店へ。カムジャバト × 三越伊勢丹 修学旅行探究プログラム" />
+  <meta property="og:description" content="学校負担と企業負担を抑えながら、講師は必要に応じて選択できるオプション制で、実在の売場から商品企画・マーケティング・地域価値を学ぶ企業共創型プログラム。" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#0b203f" />
+  <style>
+    :root{
+      --navy:#0b1f3a; --navy2:#17365f; --navy3:#2a4f7b; --red:#c72f36; --red2:#ef6254; --gold:#ba8b43;
+      --gold2:#f1ca8c; --cream:#fff8ed; --paper:#fffdf8; --mist:#f6f9ff; --ink:#17243a; --muted:#5f6d82;
+      --line:rgba(23,36,58,.11); --line-strong:rgba(23,36,58,.18); --green:#1f765c; --blue:#2f6f9f;
+      --shadow:0 28px 72px rgba(15,23,42,.18); --soft:0 16px 40px rgba(15,23,42,.08); --radius:32px;
+      --radius-sm:22px; --max:1180px; --sans:"Avenir Next","Hiragino Kaku Gothic ProN","Yu Gothic","Noto Sans JP",sans-serif;
+      --serif:"Hiragino Mincho ProN","YuMincho","Times New Roman",serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;color:var(--ink);font-family:var(--sans);line-height:1.75;letter-spacing:.02em;overflow-x:hidden;position:relative;
+      background:
+        radial-gradient(circle at 14% 4%,rgba(241,202,140,.34),transparent 18%),
+        radial-gradient(circle at 88% 2%,rgba(199,47,54,.12),transparent 18%),
+        linear-gradient(180deg,#fff8ef 0%,#fffef9 18%,#f7fbff 58%,#fff9ef 100%);
+    }
+    body::before{
+      content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;
+      background:
+        repeating-linear-gradient(90deg,transparent 0 79px,rgba(23,36,58,.06) 79px 80px),
+        repeating-linear-gradient(0deg,transparent 0 79px,rgba(23,36,58,.045) 79px 80px);
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:var(--max);margin:0 auto;padding:0 24px;position:relative;z-index:1}
+    .topbar{
+      position:sticky;top:0;z-index:70;background:rgba(255,250,243,.74);backdrop-filter:blur(20px) saturate(165%);
+      border-bottom:1px solid rgba(23,36,58,.08)
+    }
+    .topbar::after{
+      content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;
+      background:linear-gradient(90deg,rgba(186,139,67,0),rgba(186,139,67,.46),rgba(199,47,54,.52),rgba(186,139,67,0));
+    }
+    .scroll-progress{
+      position:absolute;left:0;bottom:0;height:3px;width:0;background:linear-gradient(90deg,var(--gold),var(--red2));
+      box-shadow:0 0 26px rgba(239,98,84,.42)
+    }
+    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:950;color:var(--navy);letter-spacing:.04em}
+    .brand-mark{
+      width:44px;height:44px;border-radius:16px;background:radial-gradient(circle at 30% 30%,#f7ddb0,#bf7d29);
+      display:grid;place-items:center;box-shadow:0 14px 28px rgba(186,139,67,.28);font-size:22px;transform:rotate(-12deg)
+    }
+    .navlinks{display:flex;align-items:center;gap:22px;font-size:14px;font-weight:900;color:#334155}
+    .navlinks a:not(.btn){position:relative;padding:7px 0}
+    .navlinks a:not(.btn)::after{
+      content:"";position:absolute;left:0;bottom:-2px;width:100%;height:2px;border-radius:999px;
+      background:linear-gradient(90deg,var(--gold),var(--red));transform:scaleX(0);transform-origin:left;transition:.25s ease
+    }
+    .navlinks a:not(.btn):hover{color:var(--red)}
+    .navlinks a:not(.btn):hover::after{transform:scaleX(1)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:14px 24px;font-weight:950;
+      border:1px solid transparent;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease,background .25s ease;
+      white-space:nowrap;cursor:pointer
+    }
+    .btn.primary{background:linear-gradient(135deg,var(--red),#d94a44 58%,#a61f2d);color:#fff;box-shadow:0 16px 36px rgba(199,47,54,.28)}
+    .btn.primary:hover{transform:translateY(-2px);box-shadow:0 20px 44px rgba(199,47,54,.34)}
+    .btn.secondary{background:rgba(255,255,255,.88);color:var(--navy);border-color:rgba(23,36,58,.12);box-shadow:0 12px 30px rgba(15,23,42,.08)}
+    .btn.secondary:hover{transform:translateY(-2px);border-color:rgba(186,139,67,.42)}
+    .btn.ghost{background:rgba(255,255,255,.10);color:#fff;border-color:rgba(255,255,255,.24);backdrop-filter:blur(10px)}
+    .btn.ghost:hover{transform:translateY(-2px);background:rgba(255,255,255,.16)}
+
+    .hero{position:relative;overflow:hidden;padding:96px 0 72px}
+    .hero::before{
+      content:"";position:absolute;left:-6%;top:92px;width:540px;height:540px;border-radius:50%;
+      background:radial-gradient(circle,rgba(241,202,140,.38),rgba(241,202,140,0) 68%)
+    }
+    .hero::after{
+      content:"";position:absolute;right:-180px;top:50px;width:680px;height:680px;border-radius:50%;
+      background:radial-gradient(circle at 35% 35%,rgba(199,47,54,.16),rgba(199,47,54,0) 64%)
+    }
+    .hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(420px,.94fr);gap:54px;align-items:center}
+    .hero-copy,.hero-stage{position:relative;z-index:1}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(186,139,67,.32);background:rgba(255,255,255,.8);
+      padding:9px 15px;border-radius:999px;color:var(--red);font-weight:950;font-size:14px;box-shadow:0 12px 30px rgba(186,139,67,.12)
+    }
+    .hero-intro{margin:22px 0 0;font-size:12px;letter-spacing:.34em;color:var(--gold);font-weight:950}
+    h1{
+      font-family:var(--serif);font-size:clamp(52px,8vw,94px);line-height:.96;margin:18px 0 18px;color:var(--navy);
+      letter-spacing:-.03em;font-weight:700
+    }
+    h1 .accent{
+      display:block;color:var(--red);font-family:var(--sans);font-size:clamp(24px,3.2vw,40px);margin-top:20px;
+      line-height:1.1;letter-spacing:.02em;font-weight:950
+    }
+    .lead{font-size:clamp(18px,2vw,21px);color:#344155;margin:0;font-weight:760}
+    .signal-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+    .signal{
+      display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:8px 12px;background:rgba(255,255,255,.68);
+      border:1px solid rgba(23,36,58,.09);font-size:12px;font-weight:900;color:#30445f;backdrop-filter:blur(10px)
+    }
+    .promise{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:28px 0 0}
+    .promise div{
+      position:relative;background:rgba(255,255,255,.78);border:1px solid rgba(255,255,255,.9);border-radius:22px;padding:16px 18px 18px;
+      box-shadow:0 16px 40px rgba(15,23,42,.08);backdrop-filter:blur(12px)
+    }
+    .promise div::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:linear-gradient(90deg,var(--gold),var(--red))}
+    .promise b{display:block;color:var(--navy);font-size:18px;line-height:1.3}
+    .promise span{font-size:12px;color:var(--muted);font-weight:900}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin:28px 0 0}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:24px}
+    .stat{
+      background:linear-gradient(180deg,rgba(255,255,255,.92),rgba(255,248,238,.92));border:1px solid rgba(23,36,58,.08);
+      border-radius:22px;padding:16px;box-shadow:0 12px 30px rgba(15,23,42,.06)
+    }
+    .stat b{display:block;color:var(--navy);font-size:22px;line-height:1.25}
+    .stat span{font-size:12px;color:var(--muted);font-weight:900}
+    .hero-stage{
+      min-height:736px;padding:40px 16px 0;display:block
+    }
+    .hero-stage::before{
+      content:"";position:absolute;inset:58px 10px 0;border-radius:42px;
+      background:linear-gradient(150deg,rgba(255,255,255,.58),rgba(255,255,255,.08));border:1px solid rgba(255,255,255,.48);
+      backdrop-filter:blur(12px)
+    }
+    .hero-card{
+      position:relative;z-index:2;width:min(100%,520px);margin:0 auto;transform:rotate(-2.8deg);border-radius:38px;overflow:hidden;
+      background:#fff;box-shadow:0 36px 90px rgba(11,31,58,.28);border:1px solid rgba(255,255,255,.82)
+    }
+    .hero-card::after{
+      content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.06) 30%,rgba(11,31,58,.7));
+      pointer-events:none
+    }
+    .hero-card img{width:100%;height:700px;object-fit:cover;object-position:center top}
+    .badge{
+      position:absolute;left:22px;right:22px;bottom:22px;z-index:2;background:rgba(255,255,255,.94);border:1px solid rgba(255,255,255,.9);
+      border-radius:24px;padding:16px 18px;font-weight:950;color:var(--navy);box-shadow:0 16px 36px rgba(0,0,0,.16)
+    }
+    .badge small{display:block;color:var(--red);font-size:12px;letter-spacing:.14em}
+    .hero-float{
+      position:absolute;z-index:3;border-radius:24px;background:rgba(255,255,255,.92);border:1px solid rgba(255,255,255,.9);
+      box-shadow:0 24px 55px rgba(15,23,42,.16);backdrop-filter:blur(16px)
+    }
+    .hero-float.metric{top:108px;left:-4px;width:224px;padding:18px 18px 16px;animation:floatY 7s ease-in-out infinite}
+    .hero-float.metric span{display:block;font-size:12px;letter-spacing:.2em;color:var(--red);font-weight:950}
+    .hero-float.metric strong{display:block;margin-top:7px;color:var(--navy);font-size:32px;line-height:1}
+    .hero-float.metric p{margin:8px 0 0;color:#516075;font-size:13px;font-weight:760;line-height:1.55}
+    .hero-float.photo{top:110px;right:-6px;width:184px;padding:12px;animation:floatY 9s ease-in-out infinite reverse}
+    .hero-float.photo img{height:182px;border-radius:18px;object-fit:cover}
+    .hero-float.photo small{display:block;margin-top:10px;color:var(--navy);font-weight:900;line-height:1.5}
+    .hero-float.route{
+      left:34px;bottom:68px;width:262px;padding:18px 18px 16px;background:linear-gradient(160deg,rgba(11,31,58,.96),rgba(23,54,95,.94));
+      color:#fff;border-color:rgba(255,255,255,.14);animation:floatY 8s ease-in-out infinite
+    }
+    .hero-float.route span{display:block;color:#c9d9ff;font-size:12px;letter-spacing:.18em;font-weight:900}
+    .hero-float.route strong{display:block;font-size:22px;line-height:1.2;margin-top:8px}
+    .hero-float.route p{margin:10px 0 0;color:#dce9ff;font-size:13px;font-weight:680;line-height:1.55}
+    .hero-marquee{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:34px}
+    .marquee-chip{
+      border-radius:22px;padding:16px;background:rgba(255,255,255,.78);border:1px solid rgba(255,255,255,.88);
+      box-shadow:var(--soft);backdrop-filter:blur(10px)
+    }
+    .marquee-chip span{display:block;color:var(--red);font-size:11px;letter-spacing:.18em;font-weight:950}
+    .marquee-chip b{display:block;color:var(--navy);font-size:18px;line-height:1.2;margin-top:6px}
+    .marquee-chip small{display:block;color:#5a687d;font-size:13px;font-weight:760;margin-top:6px}
+
+    section{padding:92px 0;position:relative}
+    .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;margin-bottom:36px}
+    .kicker{color:var(--red);font-weight:950;letter-spacing:.16em;font-size:12px;text-transform:uppercase}
+    .section-head h2{
+      font-family:var(--serif);font-size:clamp(34px,5vw,58px);line-height:1.08;margin:8px 0 0;color:var(--navy);
+      letter-spacing:-.02em;font-weight:700
+    }
+    .section-head p{max-width:600px;margin:0;color:#526076;font-weight:760}
+    .card{
+      background:rgba(255,255,255,.88);border:1px solid rgba(255,255,255,.9);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden
+    }
+    .pad{padding:28px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .mini-title{margin:0 0 10px;color:var(--navy);font-size:24px;font-weight:900}
+    .muted{color:#64748b}
+    .tag{
+      display:inline-flex;align-items:center;border-radius:999px;padding:7px 10px;background:#fff1f2;color:var(--red);
+      font-size:12px;font-weight:950;margin-bottom:12px
+    }
+    .icon{
+      width:56px;height:56px;border-radius:20px;display:grid;place-items:center;background:linear-gradient(135deg,var(--navy),#29507d);
+      color:#fff;font-size:24px;margin-bottom:18px;box-shadow:0 12px 24px rgba(11,31,58,.18)
+    }
+    .value-card,.solve,.plan,.workload .mini,.lecturer-card,.touch,.dash,.phase,.theme,.deliverable,.result-card,.stake,.road,.safety-item,.marquee-chip,.promise div,.stat,.hero-float,.contact-card,.ops-photo,.sample-board,.kanban-col,.dashboard,.real-strip img{
+      transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease,background .28s ease
+    }
+    .value-card:hover,.solve:hover,.plan:hover,.workload .mini:hover,.lecturer-card:hover,.touch:hover,.phase:hover,.theme:hover,.deliverable:hover,.stake:hover,.road:hover,.safety-item:hover,.result-card:hover,.ops-photo:hover,.sample-board:hover,.dashboard:hover,.real-strip img:hover{
+      box-shadow:0 24px 54px rgba(15,23,42,.12)
+    }
+    .value-card:hover,.solve:hover,.plan:hover,.workload .mini:hover,.lecturer-card:hover,.touch:hover,.phase:hover,.theme:hover,.deliverable:hover,.stake:hover,.road:hover,.safety-item:hover,.result-card:hover,.ops-photo:hover,.sample-board:hover,.dashboard:hover,.real-strip img:hover{
+      transform:translateY(-6px)
+    }
+    .value-card{
+      position:relative;padding:30px;border-radius:30px;background:linear-gradient(180deg,#fff,rgba(255,249,239,.94));
+      border:1px solid rgba(23,36,58,.08);box-shadow:var(--soft);overflow:hidden
+    }
+    .value-card:nth-child(2){background:linear-gradient(180deg,#fff,#f7fbff)}
+    .value-card:nth-child(3){background:linear-gradient(180deg,#fff,#fff7f0)}
+    .value-card h3,.plan h3,.theme h3,.phase h3,.deliverable h3,.stake h3{margin:0 0 10px;color:var(--navy);font-size:22px}
+    .value-card p,.plan p,.theme p,.phase p,.deliverable p,.stake p{margin:0;color:#475569;font-weight:680}
+    .question{
+      margin-top:32px;border-radius:34px;background:linear-gradient(135deg,var(--navy),#173b6b 55%,#284f80);color:#fff;padding:34px;
+      display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;box-shadow:var(--shadow);overflow:hidden
+    }
+    .question::before{
+      content:"";position:absolute;right:-92px;bottom:-110px;width:280px;height:280px;border-radius:50%;background:rgba(241,202,140,.18)
+    }
+    .question strong{
+      position:relative;display:block;font-family:var(--serif);font-size:clamp(29px,3.9vw,50px);line-height:1.16;letter-spacing:-.01em
+    }
+    .question span{position:relative;color:#dbeafe;font-weight:900}
+    .pill{
+      position:relative;display:inline-flex;align-items:center;border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:10px 15px;
+      font-weight:950;color:#fff;background:rgba(255,255,255,.12);backdrop-filter:blur(8px)
+    }
+
+    .operator{
+      background:
+        radial-gradient(circle at 8% 12%,rgba(47,111,159,.08),transparent 22%),
+        radial-gradient(circle at 92% 8%,rgba(241,202,140,.12),transparent 20%),
+        linear-gradient(180deg,#fff,#f8fbff)
+    }
+    .ops-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px;align-items:stretch}
+    .ops-photo{position:relative;padding:16px;background:linear-gradient(160deg,rgba(255,255,255,.92),rgba(255,255,255,.62))}
+    .ops-photo::after{
+      content:"IMPLEMENTATION FLOW";position:absolute;left:28px;top:24px;border-radius:999px;padding:9px 12px;background:rgba(11,31,58,.78);
+      color:#fff;font-size:11px;letter-spacing:.24em;font-weight:900
+    }
+    .ops-photo img{height:100%;width:100%;object-fit:cover;border-radius:24px}
+    .pain-solve{display:grid;gap:14px}
+    .solve{
+      display:grid;grid-template-columns:54px 1fr;gap:16px;padding:20px;border-radius:26px;background:rgba(255,255,255,.9);
+      border:1px solid rgba(23,36,58,.08);box-shadow:0 10px 26px rgba(15,23,42,.05)
+    }
+    .solve i{
+      font-style:normal;width:46px;height:46px;display:grid;place-items:center;border-radius:16px;background:#eff6ff;color:var(--blue);font-size:23px
+    }
+    .solve strong{display:block;color:var(--navy);font-size:19px}
+    .solve span{color:#475569;font-weight:700}
+    .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+    .plan{
+      position:relative;background:linear-gradient(180deg,#fff,rgba(249,252,255,.96));border:1px solid rgba(23,36,58,.09);
+      border-radius:30px;padding:30px;box-shadow:var(--soft)
+    }
+    .plan.reco{
+      border-color:rgba(186,139,67,.42);background:linear-gradient(180deg,#fff9ef,#fff);transform:translateY(-8px);
+      box-shadow:0 26px 56px rgba(186,139,67,.16)
+    }
+    .plan.reco:hover{transform:translateY(-10px)}
+    .plan .label{
+      position:absolute;right:20px;top:20px;border-radius:999px;background:linear-gradient(135deg,var(--navy),#274a76);color:#fff;
+      font-size:12px;font-weight:950;padding:6px 10px
+    }
+    .plan .hours{font-family:var(--serif);font-size:40px;color:var(--red);font-weight:700;line-height:1.05;margin:16px 0}
+    .plan ul{margin:16px 0 0;padding-left:1.2em;color:#334155;font-weight:680}
+    .workload{margin-top:24px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .workload .mini{
+      background:rgba(255,255,255,.92);border:1px solid rgba(23,36,58,.08);border-radius:22px;padding:18px;box-shadow:var(--soft)
+    }
+    .workload b{display:block;color:var(--navy);font-size:18px}
+    .workload span{font-size:12px;color:var(--muted);font-weight:900}
+
+    .lecturer-section{background:linear-gradient(180deg,#f8fbff,#fffdf8)}
+    .lecturer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .lecturer-card{
+      position:relative;background:rgba(255,255,255,.9);border:1px solid rgba(23,36,58,.08);border-radius:30px;padding:30px;box-shadow:var(--soft)
+    }
+    .lecturer-card.base{background:linear-gradient(180deg,#eef7ff,#fff);border-color:rgba(47,111,159,.26)}
+    .lecturer-card .label{
+      position:absolute;right:20px;top:20px;border-radius:999px;background:var(--navy);color:#fff;font-size:12px;font-weight:950;padding:6px 10px
+    }
+    .lecturer-card h3{margin:0 0 10px;color:var(--navy);font-size:22px}
+    .lecturer-card p{margin:0;color:#475569;font-weight:680}
+    .lecturer-card ul{margin:14px 0 0;padding-left:1.2em;color:#334155;font-weight:680}
+    .option-note{
+      margin-top:24px;border:1px solid rgba(199,47,54,.18);background:linear-gradient(135deg,#fff8ef,#fffdf9);
+      border-radius:24px;padding:18px 22px;color:#334155;font-weight:760
+    }
+    .option-note b{color:var(--red)}
+
+    .enterprise{
+      color:#fff;overflow:hidden;
+      background:
+        radial-gradient(circle at 12% 10%,rgba(241,202,140,.12),transparent 24%),
+        radial-gradient(circle at 92% 24%,rgba(199,47,54,.16),transparent 22%),
+        linear-gradient(135deg,#091728 0%,#102846 55%,#173d6a 100%)
+    }
+    .enterprise .section-head h2,.enterprise .section-head p{color:#fff}
+    .enterprise .section-head p{color:#dbe7f9}
+    .enterprise .kicker{color:#f4cd8d}
+    .enterprise-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:22px;align-items:start}
+    .touchpoints{display:grid;gap:12px}
+    .touch{
+      display:grid;grid-template-columns:100px 1fr auto;gap:14px;align-items:center;background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.14);border-radius:22px;padding:16px;backdrop-filter:blur(12px)
+    }
+    .touch b{color:#fff}
+    .touch small{font-weight:950;color:#f4cd8d}
+    .touch span{color:#dbe7f9;font-weight:680}
+    .touch em{
+      font-style:normal;font-weight:950;color:#bbf7d0;background:rgba(22,163,74,.16);border-radius:999px;padding:6px 10px;font-size:12px
+    }
+    .dashboard{
+      background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(255,255,255,.05));color:#fff;border-radius:30px;padding:28px;
+      box-shadow:var(--shadow);position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(16px)
+    }
+    .dashboard::before{
+      content:"";position:absolute;right:-90px;top:-90px;width:240px;height:240px;border-radius:50%;background:rgba(255,255,255,.08)
+    }
+    .dashboard h3{margin:0 0 16px;font-family:var(--serif);font-size:32px;font-weight:700}
+    .dash-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .dash{
+      position:relative;background:rgba(8,17,34,.22);border:1px solid rgba(255,255,255,.16);border-radius:20px;padding:16px
+    }
+    .dash span{display:block;color:#f4cd8d;font-size:12px;font-weight:900;letter-spacing:.06em}
+    .dash b{display:block;font-size:24px;line-height:1.15}
+    .dash p{margin:6px 0 0;color:#e5edf9;font-size:13px;line-height:1.55}
+    .ip-note{
+      margin-top:16px;background:rgba(255,255,255,.96);color:#334155;border:1px solid rgba(23,36,58,.1);border-radius:20px;padding:16px;font-weight:680
+    }
+    .ip-note b{color:var(--navy)}
+
+    .program-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px;align-items:stretch}
+    .visual{position:relative;padding:16px;background:linear-gradient(160deg,rgba(255,255,255,.92),rgba(255,255,255,.62))}
+    .visual::after{
+      content:"FIELDWORK";position:absolute;left:26px;top:22px;border-radius:999px;padding:8px 12px;background:rgba(11,31,58,.78);
+      color:#fff;font-size:11px;letter-spacing:.22em;font-weight:900
+    }
+    .visual img{height:100%;width:100%;object-fit:cover;border-radius:24px}
+    .phases{display:grid;gap:14px;position:relative}
+    .phases::before{
+      content:"";position:absolute;left:30px;top:30px;bottom:30px;width:2px;
+      background:linear-gradient(180deg,rgba(199,47,54,.28),rgba(31,118,92,.28),rgba(23,54,95,.28))
+    }
+    .phase{
+      position:relative;display:grid;grid-template-columns:72px 1fr;gap:18px;align-items:start;background:rgba(255,255,255,.92);
+      border:1px solid rgba(23,36,58,.08);border-radius:28px;padding:24px;box-shadow:var(--soft)
+    }
+    .phase-no{
+      width:60px;height:60px;border-radius:20px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,var(--red),#d46a44);
+      font-weight:950;font-size:24px;box-shadow:0 14px 24px rgba(199,47,54,.18)
+    }
+    .phase:nth-child(2) .phase-no{background:linear-gradient(135deg,var(--green),#39a17c);box-shadow:0 14px 24px rgba(31,118,92,.18)}
+    .phase:nth-child(3) .phase-no{background:linear-gradient(135deg,var(--navy),#315f9f);box-shadow:0 14px 24px rgba(11,31,58,.2)}
+    .phase ul{margin:8px 0 0;padding-left:1.1em;color:#334155;font-weight:680}
+    .themes{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .theme{
+      position:relative;background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(255,255,255,.82));border:1px solid rgba(23,36,58,.08);
+      border-radius:26px;padding:22px;min-height:214px;box-shadow:var(--soft);overflow:hidden
+    }
+    .theme::before{content:"";position:absolute;left:0;top:0;width:100%;height:4px;background:linear-gradient(90deg,var(--red),var(--gold))}
+    .theme:nth-child(2)::before{background:linear-gradient(90deg,var(--blue),#75aef1)}
+    .theme:nth-child(3)::before{background:linear-gradient(90deg,var(--green),#54b792)}
+    .theme:nth-child(4)::before{background:linear-gradient(90deg,#5d55fa,#f472b6)}
+    .theme:nth-child(5)::before{background:linear-gradient(90deg,#f97316,#fbbf24)}
+    .theme:nth-child(6)::before{background:linear-gradient(90deg,#10b981,#84cc16)}
+    .theme:nth-child(7)::before{background:linear-gradient(90deg,#0ea5e9,#2563eb)}
+    .theme:nth-child(8)::before{background:linear-gradient(90deg,#7c3aed,#ec4899)}
+    .theme-num{
+      width:36px;height:36px;border-radius:12px;background:var(--red);color:#fff;display:grid;place-items:center;font-weight:950;margin-bottom:14px
+    }
+    .theme small{display:block;color:var(--gold);font-weight:950;margin-bottom:4px;letter-spacing:.08em}
+    .deliverables{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .deliverable{
+      background:linear-gradient(180deg,#fff,#f8fbff);border:1px solid rgba(23,36,58,.08);border-radius:28px;padding:26px;box-shadow:var(--soft)
+    }
+    .deliverable .big{font-size:32px;margin-bottom:8px}
+    .sample-board{
+      margin-top:22px;background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(248,250,252,.96));border:1px solid rgba(23,36,58,.08);
+      border-radius:30px;padding:22px;box-shadow:var(--soft)
+    }
+    .kanban{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .kanban-col{
+      background:linear-gradient(180deg,#f8fbff,#fff);border-radius:18px;border:1px solid #e2e8f0;padding:12px
+    }
+    .kanban-col b{display:block;color:var(--navy);margin-bottom:8px}
+    .ticket{
+      background:#fff;border-left:4px solid var(--gold);border-radius:12px;padding:10px;margin:8px 0;color:#334155;font-size:13px;
+      font-weight:700;box-shadow:0 4px 12px rgba(15,23,42,.06)
+    }
+
+    .calculator{
+      color:#fff;overflow:hidden;
+      background:
+        radial-gradient(circle at 12% 12%,rgba(241,202,140,.10),transparent 24%),
+        radial-gradient(circle at 88% 16%,rgba(199,47,54,.16),transparent 22%),
+        linear-gradient(135deg,#091a32 0%,#102847 55%,#1c4676 100%)
+    }
+    .calc-box{display:grid;grid-template-columns:.95fr 1.05fr;gap:22px;align-items:stretch}
+    .calc-panel{
+      background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18);border-radius:30px;padding:26px;backdrop-filter:blur(14px);
+      box-shadow:0 18px 40px rgba(0,0,0,.18)
+    }
+    .calc-panel label{display:block;font-weight:950;margin:16px 0 8px}
+    .calc-panel select,.calc-panel input{
+      width:100%;border:1px solid rgba(255,255,255,.28);background:#fff;color:var(--ink);border-radius:14px;padding:13px 14px;font:inherit
+    }
+    .range-row{display:flex;gap:12px;align-items:center}
+    .range-row input{accent-color:var(--red)}
+    .result{
+      background:linear-gradient(180deg,#fff,#f7fbff);color:var(--ink);border-radius:30px;padding:26px;box-shadow:var(--shadow);
+      border:1px solid rgba(255,255,255,.75)
+    }
+    .result-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .result-card{
+      border:1px solid rgba(23,36,58,.08);border-radius:22px;padding:16px;background:linear-gradient(180deg,#fffef9,#f8fbff)
+    }
+    .result-card span{display:block;color:#64748b;font-weight:850;font-size:12px}
+    .result-card b{display:block;color:var(--navy);font-size:22px;line-height:1.2}
+    .result-note{margin-top:16px;color:#475569;font-weight:680}
+    .bar{height:10px;border-radius:999px;background:#e2e8f0;overflow:hidden;margin-top:10px}
+    .bar > i{display:block;height:100%;width:40%;background:linear-gradient(90deg,var(--gold),var(--red));border-radius:999px;transition:.25s}
+    .copybox{
+      margin-top:12px;border:1px solid rgba(241,202,140,.24);border-radius:14px;padding:12px;background:rgba(255,255,255,.08);color:#edf2ff;font-size:13px
+    }
+
+    .stakeholders{
+      background:
+        radial-gradient(circle at 90% 4%,rgba(241,202,140,.12),transparent 18%),
+        linear-gradient(180deg,#fff,#fff9ef)
+    }
+    .stake-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+    .stake{
+      background:linear-gradient(180deg,#fff,#fffefb);border:1px solid rgba(23,36,58,.08);border-radius:26px;padding:22px;box-shadow:var(--soft)
+    }
+    .stake .logo{font-size:28px}
+    .stake ul{margin:10px 0 0;padding-left:1.1em;color:#475569;font-weight:680}
+    .roadmap{margin-top:24px;display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+    .road{
+      background:rgba(255,255,255,.92);border:1px solid rgba(23,36,58,.08);border-radius:22px;padding:18px;text-align:center;box-shadow:var(--soft)
+    }
+    .road b{display:block;color:var(--red);font-size:12px;letter-spacing:.08em}
+    .road strong{display:block;color:var(--navy);font-size:17px}
+    .safety-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .safety-item{
+      display:flex;gap:12px;background:rgba(255,255,255,.92);border:1px solid rgba(23,36,58,.08);border-radius:22px;padding:18px;box-shadow:var(--soft)
+    }
+    .safety-item b{color:var(--navy)}
+    .safety-item span{display:block;color:#475569;font-weight:680}
+    .check{
+      width:32px;height:32px;border-radius:50%;background:#e8f8f1;color:var(--green);display:grid;place-items:center;flex:0 0 auto;font-weight:950
+    }
+
+    .cta{
+      position:relative;overflow:hidden;color:#fff;
+      background:
+        radial-gradient(circle at 12% 10%,rgba(241,202,140,.16),transparent 20%),
+        linear-gradient(135deg,var(--navy),#163866 58%,#244d80)
+    }
+    .cta::after{
+      content:"";position:absolute;inset:auto -12% -50% auto;width:560px;height:560px;border-radius:50%;background:rgba(186,139,67,.22)
+    }
+    .cta-grid{position:relative;display:grid;grid-template-columns:1fr .9fr;gap:26px;align-items:start}
+    .cta h2{font-family:var(--serif);font-size:clamp(36px,5vw,62px);line-height:1.08;margin:0 0 16px;font-weight:700}
+    .cta p{color:#dbeafe;font-weight:680;font-size:18px}
+    .contact-card{
+      background:rgba(255,255,255,.96);color:var(--ink);border-radius:30px;padding:26px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.84)
+    }
+    .contact-card label{display:block;font-weight:950;color:var(--navy);font-size:13px;margin:12px 0 6px}
+    .contact-card input,.contact-card textarea,.contact-card select{
+      width:100%;border:1px solid #d8e0eb;border-radius:15px;padding:13px 14px;font:inherit;background:#fff
+    }
+    .contact-card textarea{min-height:105px}
+    .contact-card button{width:100%;border:0;margin-top:16px;cursor:pointer;font:inherit}
+    .legal{font-size:12px;color:#64748b;line-height:1.65;margin-top:12px}
+    .real-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+    .real-strip img{
+      border-radius:22px;box-shadow:var(--soft);border:1px solid rgba(11,32,63,.09);height:300px;width:100%;object-fit:cover;object-position:center top
+    }
+    .cta .real-strip{grid-template-columns:repeat(2,1fr)}
+    .cta .real-strip img{height:248px}
+    footer{padding:32px 0;color:#64748b;font-size:13px;background:rgba(255,255,255,.74);border-top:1px solid rgba(23,36,58,.08);backdrop-filter:blur(10px)}
+    .footer-flex{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .source{color:#475569;font-weight:700}
+    .reveal{opacity:0;transform:translateY(22px) scale(.985);transition:opacity .7s ease,transform .7s ease}
+    .reveal.show{opacity:1;transform:translateY(0) scale(1)}
+
+    @keyframes floatY{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-10px)}
+    }
+
+    @media (max-width:1180px){
+      .hero-grid,.ops-grid,.enterprise-grid,.program-grid,.grid-2,.calc-box,.cta-grid{grid-template-columns:1fr}
+      .hero-stage{min-height:620px;max-width:640px;margin:0 auto}
+      .hero-marquee,.stats,.promise,.grid-3,.plans,.deliverables,.stake-grid,.roadmap,.lecturer-grid{grid-template-columns:repeat(2,1fr)}
+      .themes,.grid-4,.kanban,.workload{grid-template-columns:repeat(2,1fr)}
+      .section-head{display:block}
+      .question{grid-template-columns:1fr}
+      .real-strip{grid-template-columns:1fr 1fr}
+      .plan.reco{transform:none}
+    }
+    @media (max-width:860px){
+      .navlinks a:not(.btn){display:none}
+      .touch{grid-template-columns:1fr}
+      .dash-grid,.result-grid{grid-template-columns:1fr}
+      .hero-stage{padding-top:24px}
+      .hero-card img{height:auto}
+      .hero-float.metric{left:8px}
+      .hero-float.photo{right:8px}
+    }
+    @media (max-width:680px){
+      .container{padding:0 16px}
+      .nav{height:66px}
+      .brand span{font-size:13px}
+      .hero{padding:54px 0 48px}
+      section{padding:62px 0}
+      .btn{width:100%}
+      .navlinks .btn{display:none}
+      .hero-actions{gap:12px}
+      .hero-stage{
+        min-height:auto;padding:18px 0 0;display:flex;flex-direction:column;gap:14px
+      }
+      .hero-stage::before{display:none}
+      .hero-card{transform:none;width:100%}
+      .hero-float{
+        position:relative!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;width:100%!important
+      }
+      .hero-float.photo img{height:150px}
+      .hero-marquee,.stats,.promise,.grid-3,.grid-4,.plans,.deliverables,.themes,.stake-grid,.roadmap,.safety-grid,.kanban,.workload,.result-grid,.lecturer-grid{grid-template-columns:1fr}
+      .phase{grid-template-columns:1fr}
+      .phases::before{display:none}
+      .real-strip,.cta .real-strip{grid-template-columns:1fr}
+      .calc-panel,.result,.pad,.question,.contact-card{padding:22px}
+      .roadmap{gap:10px}
+      .hero-intro{letter-spacing:.22em}
+      h1{font-size:clamp(44px,16vw,68px)}
+      h1 .accent{font-size:clamp(24px,8vw,34px)}
+    }
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *{animation:none!important;transition:none!important}
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#top"><span class="brand-mark">🥔</span><span>GAMZA BATT 探究プログラム</span></a>
+      <nav class="navlinks" aria-label="主要メニュー">
+        <a href="#school">学校運用</a><a href="#enterprise">企業価値</a><a href="#flow">流れ</a><a href="#calculator">導入診断</a><a href="#contact" class="btn primary">相談する</a>
+      </nav>
+    </div>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">修学旅行 × 企業共創 × Z世代マーケティング</div>
+          <p class="hero-intro">FIELD TO FLAGSHIP STORE</p>
+          <h1>畑から<br>百貨店へ。<span class="accent">学校は2コマから。企業は月1回レビューから。</span></h1>
+          <p class="lead">韓国発じゃがいもパン「カムジャバト」と三越伊勢丹の売場を題材に、生徒が商品企画・POP・SNS・地域価値を提案する修学旅行探究プログラムです。学校の授業負担と企業の受入負担を抑えながら、リアルなマーケティング価値まで生み出す設計にしました。</p>
+          <div class="signal-row" aria-label="学べるテーマ">
+            <span class="signal">商品企画</span>
+            <span class="signal">売場POP</span>
+            <span class="signal">SNS企画</span>
+            <span class="signal">地域価値創出</span>
+          </div>
+          <div class="promise" aria-label="導入しやすさの約束">
+            <div><span>学校負担</span><b>最小2コマ＋現地90分</b></div>
+            <div><span>企業負担</span><b>動画提供＋1回レビュー</b></div>
+            <div><span>成果物</span><b>Z世代インサイト化</b></div>
+          </div>
+          <div class="hero-actions">
+            <a class="btn primary" href="#calculator">導入パターンを確認</a>
+            <a class="btn secondary" href="#enterprise">企業側メリットを見る</a>
+          </div>
+          <div class="stats" aria-label="プログラム基本情報">
+            <div class="stat"><span>対象</span><b>中3〜高校生</b></div>
+            <div class="stat"><span>標準人数</span><b>20〜80名</b></div>
+            <div class="stat"><span>タビナカ</span><b>90〜150分</b></div>
+            <div class="stat"><span>実施形態</span><b>ライト〜標準</b></div>
+          </div>
+        </div>
+        <div class="hero-stage reveal">
+          <div class="hero-card" aria-label="プログラム紹介ビジュアル">
+            <img src="assets/hero.webp" alt="カムジャバトと三越伊勢丹タイアップ修学旅行探究プログラムのメインビジュアル" />
+            <div class="badge"><small>REAL FIELD LEARNING</small>売場観察・顧客体験・地域価値を、学びと提案に変える。</div>
+          </div>
+          <div class="hero-float metric">
+            <span>PROGRAM IMPACT</span>
+            <strong>3方向の価値</strong>
+            <p>学校・企業・生徒のそれぞれに、学びと事業成果の両方が残る構成です。</p>
+          </div>
+          <div class="hero-float photo">
+            <img src="assets/mission_source.webp" alt="探究テーマの紹介資料イメージ" />
+            <small>探究テーマを旅前授業にそのまま接続</small>
+          </div>
+          <div class="hero-float route">
+            <span>FIELD ROUTE</span>
+            <strong>旅前 → 売場観察 → 提案 → 実装検討</strong>
+            <p>見学で終わらせず、学びの熱量を事業価値まで引き上げます。</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="hero-marquee reveal" aria-label="プログラム進行ハイライト">
+          <div class="marquee-chip"><span>01</span><b>旅前インプット</b><small>仮説づくりと企画準備を行う</small></div>
+          <div class="marquee-chip"><span>02</span><b>タビナカ観察</b><small>売場・顧客体験を立体的に捉える</small></div>
+          <div class="marquee-chip"><span>03</span><b>旅後プレゼン</b><small>気づきを提案へ磨き上げる</small></div>
+          <div class="marquee-chip"><span>04</span><b>企業インサイト化</b><small>生徒の声を使える資産へ変える</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><div class="kicker">Program Core</div><h2>企業見学で終わらせない。<br>でも、重くしすぎない。</h2></div>
+          <p>成功条件は、教育価値と事業価値を両立しながら、学校・企業・売場の負担を増やさないことです。本LPでは「運用できる探究」に必要な粒度までプログラムを設計しています。</p>
+        </div>
+        <div class="grid-3 reveal">
+          <div class="value-card"><div class="icon">🏫</div><h3>学校は授業化しやすい</h3><p>総合的な探究、商業、国際理解、キャリア教育へ接続。ワークシート・評価ルーブリック・発表テンプレート付きで教員準備を圧縮します。</p></div>
+          <div class="value-card"><div class="icon">🏬</div><h3>企業は負担を限定できる</h3><p>毎回の個別伴走や講師派遣を前提にせず、標準動画・資料提供・集約レビューで運用。生徒の企画はJTB側で整理して企業が見やすい形にします。</p></div>
+          <div class="value-card"><div class="icon">📊</div><h3>マーケティング価値が残る</h3><p>Z世代の購買視点、SNS企画、地域食材アイデア、売場体験の気づきを、企業側が使えるインサイトレポートとして返します。</p></div>
+        </div>
+        <div class="question reveal">
+          <div><span>探究の中心問い</span><strong>韓国発「カムジャバト」を、日本の若者にももっと愛される商品・体験にするには？</strong></div>
+          <div class="pill">体験 → 探究 → 提案 → 実装検討</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="school" class="operator">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><div class="kicker">School Operation</div><h2>学校が取り組みやすい運用設計</h2></div>
+          <p>修学旅行前後の授業枠、教員準備、評価、引率、保護者説明まで、現場で詰まりやすいポイントを先回りして軽量化します。</p>
+        </div>
+        <div class="ops-grid reveal">
+          <div class="ops-photo card"><img src="assets/flow.webp" alt="旅前・旅中・旅後の学習設計" /></div>
+          <div class="pain-solve">
+            <div class="solve"><i>⏱️</i><div><strong>コマ数確保は3段階で対応</strong><span>最小版は旅前2コマ＋旅後1コマ。標準版は旅前4〜6コマ＋旅後2〜3コマ。学校の年間計画に合わせて選べます。</span></div></div>
+            <div class="solve"><i>📄</i><div><strong>教員準備は配布物で圧縮</strong><span>導入スライド、ワークシート、評価ルーブリック、発表テンプレート、保護者説明文の雛形を提供します。</span></div></div>
+            <div class="solve"><i>🧑‍🏫</i><div><strong>授業進行は教員主導＋遠隔支援</strong><span>標準はオンライン支援です。講師登壇はオプションで、オンライン講師または対面講師を選択可能。対面時は講師交通費・宿泊費等を別途実費として扱います。</span></div></div>
+            <div class="solve"><i>🚌</i><div><strong>旅程内に入れやすい現地90分設計</strong><span>売場観察、フィールドワーク、Q&Aをローテーション化し、混雑・移動・安全管理に配慮します。</span></div></div>
+            <div class="solve"><i>📈</i><div><strong>評価しやすい成果物</strong><span>個人振り返り、チーム企画書、最終発表を用意。探究プロセスと協働・表現を評価できます。</span></div></div>
+          </div>
+        </div>
+        <div class="plans reveal">
+          <article class="plan"><span class="label">最小導入</span><h3>ライト版</h3><p>修学旅行に差し込みやすい最短構成。</p><div class="hours">3〜4コマ</div><ul><li>旅前2コマ</li><li>タビナカ90分</li><li>旅後1コマ</li><li>企業レビューは集約コメント</li><li>講師なし／オンライン支援で実施可</li></ul></article>
+          <article class="plan reco"><span class="label">推奨</span><h3>標準版</h3><p>探究活動として成果が出やすい標準構成。</p><div class="hours">6〜9コマ</div><ul><li>旅前4〜6コマ</li><li>タビナカ120分</li><li>旅後2〜3コマ</li><li>優秀案レビュー・表彰</li><li>オンライン講師を追加選択可</li></ul></article>
+          <article class="plan"><span class="label">高付加価値</span><h3>実装検討版</h3><p>企業共創・商品化検討まで進める発展構成。</p><div class="hours">10コマ〜</div><ul><li>地域食材調査</li><li>企業レビュー2回</li><li>試作・展示検討</li><li>成果報告会</li><li>対面講師は交通費別途</li></ul></article>
+        </div>
+        <div class="workload reveal" aria-label="学校運用の負担軽減ポイント">
+          <div class="mini"><span>教員作成物</span><b>ゼロから作らない</b></div><div class="mini"><span>授業実施</span><b>台本・スライド付き</b></div><div class="mini"><span>講師支援</span><b>必要時だけ選択</b></div><div class="mini"><span>対面講師</span><b>交通費は別途</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="lecturer" class="lecturer-section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><div class="kicker">Lecturer Option</div><h2>講師は標準必須ではなく、必要な学校だけ選べる</h2></div>
+          <p>多くの学校が導入できるよう、基本運用はオンライン支援＋教員進行で成立。講師登壇は学年規模、先生の経験、学校の希望に応じて追加します。</p>
+        </div>
+        <div class="lecturer-grid reveal">
+          <article class="lecturer-card base"><span class="label">標準</span><div class="icon">💻</div><h3>オンライン支援</h3><p>標準資料、事前オンライン説明、質問受付、運用台本で学校実施を支援します。講師登壇なしでも授業化できます。</p><ul><li>教員主導で実施</li><li>資料・台本・ワークシート提供</li><li>事前説明・質問対応はオンライン</li><li>基本価格に組み込みやすい設計</li></ul></article>
+          <article class="lecturer-card"><span class="label">追加選択</span><div class="icon">🧑‍🏫</div><h3>オンライン講師登壇</h3><p>旅前導入、企画レビュー、旅後発表講評など、必要な場面だけオンライン講師を追加できます。</p><ul><li>1コマ単位で追加しやすい</li><li>遠方校でも導入可能</li><li>交通費不要</li><li>学校側の不安を軽減</li></ul></article>
+          <article class="lecturer-card"><span class="label">別途実費</span><div class="icon">🚄</div><h3>対面講師登壇</h3><p>現地導入授業、成果発表会、企業合同ワークショップなど、高付加価値化したい場合に選択します。</p><ul><li>対面講師費は別途見積</li><li>交通費・宿泊費等は別途実費</li><li>学校行事・成果発表会に適合</li><li>実施地域・日程により調整</li></ul></article>
+        </div>
+        <div class="option-note reveal"><b>価格設計の明確化：</b>標準プログラムはオンライン支援を基本にし、対面講師の交通費を標準価格に内包しません。これにより、遠方校・少人数校・初年度モニター校でも導入しやすくします。</div>
+      </div>
+    </section>
+
+    <section id="enterprise" class="enterprise">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><div class="kicker">Enterprise Value</div><h2>三越伊勢丹・タイアップ企業側の付加価値</h2></div>
+          <p>教育貢献で終わらせず、Z世代インサイト、商品企画、売場改善、SNS企画、地域共創の種が残る設計です。</p>
+        </div>
+        <div class="enterprise-grid reveal">
+          <div class="touchpoints">
+            <div class="touch"><small>01</small><div><b>ブランド説明動画・資料の標準化</b><span>毎校対応を避け、10〜15分の標準動画と掲載可能資料で共通運用。</span></div><em>低負担</em></div>
+            <div class="touch"><small>02</small><div><b>現地受入はローテーション式</b><span>売場滞留を抑え、観察・質問・移動を分ける。企業担当者の拘束時間を限定。</span></div><em>現実的</em></div>
+            <div class="touch"><small>03</small><div><b>生徒案はJTB側で集約・整形</b><span>全提出物をそのまま企業へ渡さず、優秀案・傾向・使える示唆に加工。</span></div><em>使える</em></div>
+            <div class="touch"><small>04</small><div><b>守秘・商標・撮影ルールを先に整理</b><span>撮影可否、SNS投稿、企業名表記、商品化検討時の権利関係を事前に明確化。</span></div><em>安心</em></div>
+            <div class="touch"><small>05</small><div><b>年間レポート化でPR・CSRにも展開</b><span>教育支援、若者共創、地域共創の実績として、社内報・広報・採用広報にも活用可能。</span></div><em>資産化</em></div>
+          </div>
+          <div class="dashboard">
+            <h3>企業に残るアウトプット</h3>
+            <div class="dash-grid">
+              <div class="dash"><span>Z世代インサイト</span><b>30〜80名分</b><p>買いたい理由、SNSで広がる理由、刺さらない理由を整理。</p></div>
+              <div class="dash"><span>商品・売場アイデア</span><b>10〜30案</b><p>新フレーバー、限定BOX、POP、導線の仮説を収集。</p></div>
+              <div class="dash"><span>SNS企画</span><b>5〜15案</b><p>ショート動画、UGC、フォトスポット、投稿テーマを収集。</p></div>
+              <div class="dash"><span>地域共創候補</span><b>複数地域</b><p>地元農産物・観光資源・学校連携の接点を発見。</p></div>
+            </div>
+            <div class="ip-note"><b>企業負担を増やさないための原則：</b>企業は毎回の講師派遣を必須にせず、標準資料・受入枠・月次レビューで運用。講師支援はオプション選択とし、基本はオンライン対応。対面講師を希望する場合は交通費・宿泊費等を別途実費とします。商品化・販売・クレジット表記は別途合意がある場合のみ実施します。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="flow">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><div class="kicker">Learning Flow</div><h2>旅前・旅中・旅後を一本の学びにする</h2></div>
+          <p>旅の中の90〜150分を、授業前後の探究活動とつなぎます。見学で終わらず、提案・評価・振り返りまで完結します。</p>
+        </div>
+        <div class="program-grid reveal">
+          <div class="visual card"><img src="assets/tabinaka.webp" alt="売場観察とフィールドワークのイメージ" /></div>
+          <div class="phases">
+            <article class="phase"><div class="phase-no">1</div><div><h3>タビマエ｜学校での事前学習</h3><p>ブランド・農業・市場・顧客を学び、チームごとに仮説と企画案をつくります。</p><ul><li>最小：2コマ／標準：4〜6コマ</li><li>成果物：企画書、POP案、SNS企画、質問リスト</li><li>企業資料は標準パッケージで配布</li></ul></div></article>
+            <article class="phase"><div class="phase-no">2</div><div><h3>タビナカ｜東京・横浜での体験学習</h3><p>三越伊勢丹関連売場、カムジャバト店舗・POP UP、横浜エリアを観察し、顧客体験を分析します。</p><ul><li>現地所要：90〜150分</li><li>標準人数：20〜80名／最大120名目安</li><li>売場観察・顧客導線・接客・陳列・Q&A</li></ul></div></article>
+            <article class="phase"><div class="phase-no">3</div><div><h3>タビアト｜改善・最終提案</h3><p>現地で得た気づきを整理し、企画をブラッシュアップ。企業・学校関係者への最終プレゼンにつなげます。</p><ul><li>最小：1コマ／標準：2〜3コマ</li><li>優秀案をJTB側で集約</li><li>企業レビュー・表彰・実装検討へ接続</li></ul></div></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="themes">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><div class="kicker">8 Themes</div><h2>学べる8テーマと授業接続</h2></div>
+          <p>総合的な探究の時間、商業、国際理解、キャリア教育、地域学習に接続。学校ごとに重点テーマを選べます。</p>
+        </div>
+        <div class="themes reveal">
+          <article class="theme"><div class="theme-num">1</div><small>Planning</small><h3>企画</h3><p>課題やニーズを見つけ、商品・体験のアイデアを形にします。</p></article>
+          <article class="theme"><div class="theme-num">2</div><small>Sales</small><h3>販売</h3><p>接客や売場づくりを通して、顧客視点で価値を考えます。</p></article>
+          <article class="theme"><div class="theme-num">3</div><small>Marketing</small><h3>マーケティング</h3><p>市場・顧客・競合を分析し、選ばれる理由を設計します。</p></article>
+          <article class="theme"><div class="theme-num">4</div><small>SNS</small><h3>SNS・プロモーション</h3><p>動画・投稿・UGCを想定し、魅力の伝え方を企画します。</p></article>
+          <article class="theme"><div class="theme-num">5</div><small>Logistics</small><h3>流通・物流</h3><p>商品が届くまでの流れ、在庫、配送、販売チャネルを学びます。</p></article>
+          <article class="theme"><div class="theme-num">6</div><small>Food</small><h3>農業・食</h3><p>素材、生産者、地域資源、食品衛生を商品価値として捉えます。</p></article>
+          <article class="theme"><div class="theme-num">7</div><small>Local</small><h3>地方創生</h3><p>地元の魅力を発見し、都市の顧客へ届ける方法を考えます。</p></article>
+          <article class="theme"><div class="theme-num">8</div><small>Career</small><h3>日韓交流・キャリア探究</h3><p>働く人の役割を知り、将来の進路やキャリアへ接続します。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="deliverables">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><div class="kicker">Outputs</div><h2>学校にも企業にも残る成果物</h2></div>
+          <p>成果物を明確化することで、学校は評価しやすく、企業はマーケティング・商品開発・広報に活用しやすくなります。</p>
+        </div>
+        <div class="deliverables reveal">
+          <div class="deliverable"><div class="big">📘</div><h3>学校向け</h3><p>授業スライド、ワークシート、評価ルーブリック、発表テンプレート、保護者説明文。</p></div>
+          <div class="deliverable"><div class="big">📊</div><h3>企業向け</h3><p>Z世代インサイトレポート、優秀企画一覧、売場観察コメント、SNS企画案。</p></div>
+          <div class="deliverable"><div class="big">🏆</div><h3>生徒向け</h3><p>企画書、プレゼン資料、個人振り返り、修学旅行×探究の活動証明。</p></div>
+        </div>
+        <div class="sample-board reveal">
+          <h3 class="mini-title">企業レビュー用：アイデア集約ボード例</h3>
+          <div class="kanban" aria-label="アイデア集約ボード">
+            <div class="kanban-col"><b>商品案</b><div class="ticket">地元さつまいも×カムジャバト限定味</div><div class="ticket">抹茶チーズ・季節限定BOX</div></div>
+            <div class="kanban-col"><b>売場案</b><div class="ticket">手土産導線のPOP改善</div><div class="ticket">写真を撮りたくなる陳列演出</div></div>
+            <div class="kanban-col"><b>SNS案</b><div class="ticket">#じゃがいもに見えるパン選手権</div><div class="ticket">開封動画・断面動画企画</div></div>
+            <div class="kanban-col"><b>地域案</b><div class="ticket">生産者ストーリーカード</div><div class="ticket">修学旅行先×地元食材コラボ</div></div>
+          </div>
+        </div>
+        <div class="real-strip reveal">
+          <img src="assets/tabinaka_source.webp" alt="タビナカ体験の紹介ページ" />
+          <img src="assets/mission_source.webp" alt="探究テーマの具体例ページ" />
+          <img src="assets/benefits_source.webp" alt="ステークホルダーのメリットページ" />
+        </div>
+      </div>
+    </section>
+
+    <section id="calculator" class="calculator">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><div class="kicker" style="color:#fbbf24">Plan Simulator</div><h2 style="color:#fff">導入しやすさをその場で確認</h2></div>
+          <p style="color:#dbeafe">人数と学校の余力に合わせて、必要コマ数・企業接点・成果物の目安を表示します。営業時の初回ヒアリングにも使えます。</p>
+        </div>
+        <div class="calc-box reveal">
+          <div class="calc-panel">
+            <label for="students">参加人数</label>
+            <div class="range-row"><input type="range" id="students" min="20" max="120" step="10" value="60" /><strong id="studentsLabel">60名</strong></div>
+            <label for="capacity">学校の授業枠</label>
+            <select id="capacity"><option value="light">最小限：旅前2コマ＋旅後1コマ</option><option value="standard" selected>標準：旅前4〜6コマ＋旅後2〜3コマ</option><option value="full">発展：10コマ以上確保できる</option></select>
+            <label for="enterpriseLevel">企業側の関与余力</label>
+            <select id="enterpriseLevel"><option value="low">低：動画・資料提供＋集約レビュー</option><option value="mid" selected>中：現地Q&A＋優秀案コメント</option><option value="high">高：複数回レビュー・実装検討まで</option></select>
+            <label for="lecturerSupport">講師サポート</label>
+            <select id="lecturerSupport"><option value="base" selected>基本：オンライン説明・質問受付</option><option value="online">オプション：オンライン講師登壇</option><option value="onsite">オプション：対面講師登壇（交通費・宿泊費別途）</option></select>
+            <div class="copybox">営業メモ：標準価格はオンライン支援を基本に設計。講師登壇は必要校だけ選択し、対面時の交通費・宿泊費等は別途実費として明示する。</div>
+          </div>
+          <div class="result" aria-live="polite">
+            <h3 class="mini-title">おすすめ導入パターン</h3>
+            <div class="result-grid">
+              <div class="result-card"><span>推奨プラン</span><b id="planName">標準版</b><div class="bar"><i id="bar1"></i></div></div>
+              <div class="result-card"><span>必要コマ数</span><b id="periods">6〜9コマ</b><div class="bar"><i id="bar2"></i></div></div>
+              <div class="result-card"><span>現地運用</span><b id="onsite">2班ローテーション</b><div class="bar"><i id="bar3"></i></div></div>
+              <div class="result-card"><span>企業接点</span><b id="touchOut">現地Q&A＋コメント</b><div class="bar"><i id="bar4"></i></div></div>
+              <div class="result-card"><span>企業拘束目安</span><b id="corpHours">月2〜3時間</b><div class="bar"><i id="bar5"></i></div></div>
+              <div class="result-card"><span>講師サポート</span><b id="lecturerOut">オンライン支援</b><div class="bar"><i id="bar6"></i></div></div>
+              <div class="result-card"><span>成果物</span><b id="outputLevel">企画書＋レポート</b><div class="bar"><i id="bar7"></i></div></div>
+            </div>
+            <p class="result-note" id="resultNote">60名規模では、30名×2班で売場観察とQ&Aを分けると安全・混雑・企業負担のバランスが取りやすくなります。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="safety">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><div class="kicker">Risk Control</div><h2>安全・権利・運営ルールを先に整える</h2></div>
+          <p>食品、撮影、SNS、売場混雑、商標・権利を曖昧にしないことで、学校も企業も安心して参加できます。</p>
+        </div>
+        <div class="safety-grid reveal">
+          <div class="safety-item"><div class="check">✓</div><div><b>食品・アレルギー対応</b><span>試食は必須にせず、観察中心でも成立。試食する場合は事前告知・代替案・保護者確認を用意します。</span></div></div>
+          <div class="safety-item"><div class="check">✓</div><div><b>SNS・撮影許諾</b><span>撮影可否、人物映り込み、企業ロゴ、投稿範囲を事前に整理。原則は校内発表・非公開利用から開始します。</span></div></div>
+          <div class="safety-item"><div class="check">✓</div><div><b>売場負担の抑制</b><span>混雑時間帯を避け、班別ローテーション、質問数制限、集合場所指定で通常営業への影響を抑えます。</span></div></div>
+          <div class="safety-item"><div class="check">✓</div><div><b>商品化・権利関係</b><span>生徒アイデアの実装、名称掲載、クレジット表記、販売利用は、事前合意・監修・契約の範囲内で扱います。</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stakeholders" class="stakeholders">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><div class="kicker">Stakeholder Fit</div><h2>各ステークホルダーに刺さる理由</h2></div>
+          <p>教育旅行の差別化、商品・売場アイデア、若年層接点、地域共創、キャリア教育が同時に成立します。</p>
+        </div>
+        <div class="stake-grid reveal">
+          <div class="stake"><div class="logo">🚌</div><h3>JTB</h3><ul><li>修学旅行の高付加価値化</li><li>学校との継続接点</li><li>教育旅行の差別化</li></ul></div>
+          <div class="stake"><div class="logo">🥔</div><h3>BATT JP</h3><ul><li>Z世代の生声収集</li><li>商品・SNSの新仮説</li><li>地域コラボの候補発掘</li></ul></div>
+          <div class="stake"><div class="logo">🏬</div><h3>三越伊勢丹</h3><ul><li>若年層との新接点</li><li>売場体験の価値向上</li><li>教育・地域共創の発信</li></ul></div>
+          <div class="stake"><div class="logo">🏫</div><h3>学校</h3><ul><li>総探・商業・国際理解</li><li>実社会とつながる学び</li><li>評価しやすい成果物</li></ul></div>
+          <div class="stake"><div class="logo">👥</div><h3>生徒</h3><ul><li>リアルな企画体験</li><li>発表・協働力の向上</li><li>進路・職業観の形成</li></ul></div>
+        </div>
+        <div class="roadmap reveal" aria-label="スケール展開のロードマップ">
+          <div class="road"><b>STEP 1</b><strong>モニター1校</strong><span>運用検証</span></div><div class="road"><b>STEP 2</b><strong>標準教材化</strong><span>台本・資料整備</span></div><div class="road"><b>STEP 3</b><strong>年間5〜10校</strong><span>受入枠調整</span></div><div class="road"><b>STEP 4</b><strong>地域展開</strong><span>各地食材連携</span></div><div class="road"><b>STEP 5</b><strong>成果発表会</strong><span>企業・学校PR</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="cta">
+      <div class="container cta-grid">
+        <div class="reveal">
+          <div class="kicker" style="color:#fbbf24">Pilot First</div>
+          <h2>まずは、モニター校1校から。</h2>
+          <p>実績づくりを最優先に、学校の授業枠・旅行日程・企業の受入余力に合わせて、軽量なプログラムから開始できます。</p>
+          <div class="hero-actions"><a class="btn primary" href="mailto:xxxxx@jtb.com?subject=カムジャバト探究プログラム相談">メールで相談する</a><a class="btn ghost" href="#calculator">導入診断に戻る</a></div>
+          <div class="real-strip"><img src="assets/brochure_cover.webp" alt="プログラム表紙イメージ" /><img src="assets/closing_source.webp" alt="エンディングイメージ" /></div>
+        </div>
+        <form class="contact-card reveal" onsubmit="event.preventDefault(); alert('デモLPのため送信は無効です。公開時にGoogleフォームまたはCRM連携URLへ差し替えてください。');">
+          <h3 class="mini-title">資料請求・実施相談</h3>
+          <label>学校名・企業名</label><input required placeholder="例：〇〇高等学校 / 〇〇株式会社" />
+          <label>立場</label><select><option>学校関係者</option><option>旅行会社・代理店</option><option>企業・ブランド関係者</option><option>その他</option></select>
+          <label>参加人数の目安</label><input placeholder="例：40名、1学年120名など" />
+          <label>相談内容</label><textarea placeholder="実施時期、旅行先、授業枠、講師オプション希望、企業受入条件など"></textarea>
+          <button class="btn primary" type="submit">相談内容を送信する</button>
+          <p class="legal">※公開時には正式な問い合わせフォームURL、個人情報保護方針、運営主体表記、各社承認済みロゴ・画像へ差し替えてください。</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-flex">
+      <div>© GAMZA BATT × MITSUKOSHI ISETAN × JTB 探究プログラム LP draft</div>
+      <div class="source">講師オプション制・学校運用・企業負担軽減・マーケティング価値を統合した営業用デモLP</div>
+    </div>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})},{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+    const scrollProgress = document.getElementById('scrollProgress');
+    function updateScrollProgress(){
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      scrollProgress.style.width = (max > 0 ? window.scrollY / max * 100 : 0) + '%';
+    }
+    const students = document.getElementById('students');
+    const studentsLabel = document.getElementById('studentsLabel');
+    const capacity = document.getElementById('capacity');
+    const enterpriseLevel = document.getElementById('enterpriseLevel');
+    const lecturerSupport = document.getElementById('lecturerSupport');
+    const $ = (id)=>document.getElementById(id);
+    function updateCalc(){
+      const n = Number(students.value); studentsLabel.textContent = n + '名';
+      let planName='標準版', periods='6〜9コマ', onsite='2班ローテーション', touchOut='現地Q&A＋コメント', corpHours='月2〜3時間', lecturer='オンライン支援', output='企画書＋レポート', note='';
+      const cap = capacity.value, ent = enterpriseLevel.value, lect = lecturerSupport.value;
+      if(cap==='light'){planName='ライト版'; periods='3〜4コマ'; output='企画書＋簡易発表';}
+      if(cap==='full'){planName='実装検討版'; periods='10コマ〜'; output='企画書＋試作/展示検討';}
+      if(n<=40){onsite='1班または2班'; note=n+'名規模では、1班運用でも成立します。売場負担を下げる場合は観察班とQ&A班に分けます。';}
+      else if(n<=80){onsite='2班ローテーション'; note=n+'名規模では、30〜40名単位で売場観察とQ&Aを分けると安全・混雑・企業負担のバランスが取りやすくなります。';}
+      else {onsite='3〜4班ローテーション'; note=n+'名規模では、売場滞留を避けるため3〜4班に分け、横浜エリアフィールドワークや別会場ワークを組み合わせる設計が必要です。';}
+      if(ent==='low'){touchOut='動画＋集約レビュー'; corpHours='月1〜2時間';}
+      if(ent==='mid'){touchOut='現地Q&A＋コメント'; corpHours='月2〜3時間';}
+      if(ent==='high'){touchOut='複数回レビュー'; corpHours='月4〜6時間';}
+      if(lect==='base'){lecturer='オンライン支援';}
+      if(lect==='online'){lecturer='オンライン講師'; note += ' 講師登壇はオンラインで追加できるため、交通費なしで学校側の安心感を高められます。';}
+      if(lect==='onsite'){lecturer='対面講師＋交通費別'; note += ' 対面講師を選ぶ場合は、講師費に加えて交通費・宿泊費等を別途実費として見積に明記します。';}
+      if(cap==='light' && ent==='low'){note += ' 企業側は標準動画と月次レビューのみで開始できるため、初年度モニターに最適です。';}
+      if(cap==='full' && ent==='high'){note += ' 商品化・展示・SNS活用まで見据えた共創案件として設計できます。';}
+      $('planName').textContent=planName; $('periods').textContent=periods; $('onsite').textContent=onsite; $('touchOut').textContent=touchOut; $('corpHours').textContent=corpHours; $('lecturerOut').textContent=lecturer; $('outputLevel').textContent=output; $('resultNote').textContent=note;
+      const widths = cap==='light' ? [34,28,42,32,28,36,36] : cap==='full' ? [92,88,78,86,70,lect==='onsite'?78:lect==='online'?62:42,92] : [62,58,64,58,50,lect==='onsite'?72:lect==='online'?58:40,66];
+      ['bar1','bar2','bar3','bar4','bar5','bar6','bar7'].forEach((id,i)=>$(id).style.width=widths[i]+'%');
+    }
+    [students, capacity, enterpriseLevel, lecturerSupport].forEach(el=>el.addEventListener('input', updateCalc));
+    window.addEventListener('scroll', updateScrollProgress, { passive:true });
+    window.addEventListener('resize', updateScrollProgress);
+    updateCalc();
+    updateScrollProgress();
+  </script>
+</body>
+</html>
